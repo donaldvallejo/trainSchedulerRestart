@@ -3,13 +3,10 @@
   <head>
     <link rel="stylesheet" href="assets/style/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="assets/javascript/app.js"></script>
     <meta charset="utf-8">
-
-
-	<script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
-	<script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
+    <script>
   var config = {
   apiKey: "AIzaSyCVH3xxzmbkHdlAw1k1B6Gtg39iBQyABFw",
   authDomain: "trainscheduler-91334.firebaseapp.com",
@@ -58,23 +55,19 @@ firebase.initializeApp(config);
       </div>
       <div class="panel-body">
 
-        <!-- Here we create an HTML Form for handling the inputs-->
         <form role="form">
 
-            <!-- Here we create the text box for capturing the search term-->
           <div class="form-group">
             <label for="search">Train Name</label>
             <input type="text" class="form-control" id="name">
           </div>
 
-          <!-- Here we capture the number of records that the user wants to retrieve  -->
           <div class="form-group">
             <label for="role">Destination</label>
             <input type="text" class="form-control" id="role">
 
           </div>
 
-            <!-- Here we capture the Start Year Parameter-->
           <div class="form-group">
             <label for="startYear">First Train Time (HH:mm - military time)</label>
             <input type="text" class="form-control" id="startDate">
@@ -122,5 +115,11 @@ firebase.initializeApp(config);
     </div>
   </div>
 
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <!-- <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script> -->
+  <script type="text/javascript" src="assets/javascript/app.js"></script>
   </body>
 </html>
