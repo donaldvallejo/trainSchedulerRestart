@@ -21,30 +21,26 @@
 firebase.initializeApp(config);
 	</script>
 
-    <title>some shit</title>
+    <title>RestartTrainScheduler</title>
   </head>
   <body>
     <div class="jumbotron" style="background-color: #337ab7; color: white;">
-      <h1 class="text-center"><strong><i class="fa fa-newspaper-o"></i>Employee Data Management</strong></h1>
+      <h1 class="text-center"><strong><i class="fa fa-newspaper-o"></i>Train Scheduler</strong></h1>
     </div>
 
             <div class="row">
                 <div class="col-xs-12">
                     <div class="panel panel-primary" style="border-color: #337ab7">
-                        <!-- Default panel contents -->
-                        <div class="panel-heading">Current Employees</div>
-                        <!-- Table -->
+                        <div class="panel-heading">Current Train Schedule</div>
                         <table class="table">
                             <tr>
-                                <th class="title">Employee Name</th>
-                                <th class="title">Role</th>
-                                <th class="title">Start Date</th>
-                                <th class="title">Months Worked</th>
-                                <th class="title">Monthly Rate ($)</th>
-                                <th class="title">Total Billed ($)</th>
+                                <th class="title">Train Name</th>
+                                <th class="title">Destination</th>
+                                <th class="title">Frequency (min)</th>
+                                <th class="title">Next Arrival</th>
+                                <th class="title">Minutes Away</th>
                             </tr>
                             <tr>
-                                <td class="employee">...</td>
                                 <td class="employee">...</td>
                                 <td class="employee">...</td>
                                 <td class="employee">...</td>
@@ -58,7 +54,7 @@ firebase.initializeApp(config);
 
     <div class="panel panel-primary">
       <div class="panel-heading">
-        <h3 class="panel-title"><strong><i class="fa  fa-list-alt"></i>Add Employee</strong></h3>
+        <h3 class="panel-title"><strong><i class="fa  fa-list-alt"></i>Add Train</strong></h3>
       </div>
       <div class="panel-body">
 
@@ -67,32 +63,31 @@ firebase.initializeApp(config);
 
             <!-- Here we create the text box for capturing the search term-->
           <div class="form-group">
-            <label for="search">Employee Name</label>
+            <label for="search">Train Name</label>
             <input type="text" class="form-control" id="name">
           </div>
 
           <!-- Here we capture the number of records that the user wants to retrieve  -->
           <div class="form-group">
-            <label for="role">Role</label>
+            <label for="role">Destination</label>
             <input type="text" class="form-control" id="role">
 
           </div>
 
             <!-- Here we capture the Start Year Parameter-->
           <div class="form-group">
-            <label for="startYear">Start Date</label>
+            <label for="startYear">First Train Time (HH:mm - military time)</label>
             <input type="text" class="form-control" id="startDate">
           </div>
 
-            <!-- Here we capture the End Year Parameter -->
           <div class="form-group">
-            <label for="endYear">Monthly Rate</label>
+            <label for="endYear">Frequency (min)</label>
             <input type="text" class="form-control" id="monthlyRate">
           </div>
 
-          <!-- Here we have our final submit button -->
           <button type="submit" class="btn btn-default" id="add"><i class="fa fa-search"></i> add</button>
-            <!-- <button type="button" class="btn btn-default" id="clearAll"><i class="fa fa-trash"></i> Clear Results</button> -->
+          <button type="submit" class="btn btn-default" id="remove"><i class="fa fa-search"></i> remove</button>
+
 
         </form>
       </div>
